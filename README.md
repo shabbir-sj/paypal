@@ -55,3 +55,7 @@ docker pull sjametwala/paypal
 ```
 docker run -p 8080:80 sjametwala/paypal
 ```
+- Open Browser
+```
+localhost:8080/
+```

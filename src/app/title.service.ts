@@ -5,7 +5,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
-const defaultHeadTitle = 'DTR Operations';
+const defaultHeadTitle = 'Paypal';
 
 /**
  * Service to control page titles.

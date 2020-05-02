@@ -1,7 +1,7 @@
 {
-	"name": "dtr",
-	"version": "2.0.0",
-	"license": "dtr",
+	"name": "paypal",
+	"version": "0.0.0",
+	"license": "paypal",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",

@@ -10,7 +10,7 @@ import { ModuleSpinnerService } from './module-spinner.service';
 import { TitleService } from './title.service';
 
 @Component({
-	selector: 'dtr-app',
+	selector: 'paypal-app',
 	template: ` <router-outlet></router-outlet> `,
 	styles: [
 		`
