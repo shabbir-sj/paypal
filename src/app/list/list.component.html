@@ -1,0 +1,56 @@
+<nav-bar (onSearch)="searchByName($event)"></nav-bar>
+
+<div class="page-content">
+
+	<div class="d-flex justify-content-end mx-4">
+		<div ngbDropdown class="d-inline-block">
+			<button class="btn sort-dropdown" id="dropdownBasic1" ngbDropdownToggle>-- Sort By {{sortText}} --</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button ngbDropdownItem (click)="sortByDefault()">Default</button>
+				<button ngbDropdownItem (click)="sortByPrice()">Price</button>
+				<button ngbDropdownItem (click)="sortByRating()">Rating</button>
+				<button ngbDropdownItem (click)="sortByVote()">Vote</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-flex justify-content-around flex-wrap">
+		<div class="card" *ngFor="let item of list">
+			<div class="card-detail">
+				<div class="card-title">
+					{{ item.restaurantName }}
+				</div>
+				<div class="card-secondary-info">
+					<span *ngFor="let cuisine of item.cuisines">{{ cuisine }}</span>
+				</div>
+				<div class="service mb-2 d-flex flex-column">
+					<div>Table Booking {{item.hasTableBooking ? 'Available' : 'Not Available'}}</div>
+					<div>Online Delivery {{item.hasOnlineDelivery ? 'Available' : 'Not Available'}}</div>
+				</div>
+	
+				<div class="mb-2 d-flex">
+					<span class="mr-1 secondary-color">For Two</span>
+					<span class="mr-1">{{ item.averageCostForTwo }}</span>
+					<span class="secondary-color">{{ item.currency }}</span>
+				</div>
+				<div class="d-flex align-items-center">
+					<div
+						class="rating py-1 px-2 mr-3 d-flex align-items-center"
+						[ngClass]="getRatingClass(item.ratingColor)"
+					>
+						<i class="fas fa-star mr-1"></i>
+						<span class="mr-1">{{ item.aggregateRating }}</span>
+						<span class="mx-2">|</span>
+						<span>{{ item.ratingText }}</span>
+					</div>
+	
+					<div class="vote py-1 px-2 d-flex align-items-center">
+						<i class="fas fa-thumbs-up mr-1"></i>
+						<span class="mr-1">{{ item.votes }}</span>
+						<span>Votes</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

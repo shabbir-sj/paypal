@@ -1,0 +1,99 @@
+.page-content {
+	margin: 50px;
+}
+
+.secondary-color {
+	color: #8197a4;
+}
+
+.sort-dropdown {
+	border: 1px solid gainsboro;
+	color: gainsboro;
+}
+
+.sort-box .caret {
+	float: right;
+	margin-top: 10px;
+}
+
+/*----- List Section ------*/
+
+.card {
+	width: 400px;
+	padding: 20px;
+	overflow: hidden;
+	background-color: #1b2631;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.card-title {
+	font-size: 21px;
+	line-height: 24px;
+	padding-bottom: 15px;
+}
+
+.card-secondary-info {
+	margin-bottom: 20px;
+}
+
+.card-secondary-info span {
+	margin-right: 5px;
+	padding: 5px 10px;
+	border: 1px solid grey;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	color: #d4d9dc;
+}
+
+.card-detail {
+	position: relative;
+	overflow: hidden;
+	letter-spacing: 0.5px;
+}
+
+.service {
+	font-size: 0.9rem;
+	color: #b3c0c7;
+}
+
+.rating {
+	font-size: 0.8rem;
+	border-radius: 4px;
+
+	&.yellow {
+		color: #333;
+		background-color: yellow;
+	}
+
+	&.orange {
+		color: #333;
+		background-color: orange;
+	}
+
+	&.green {
+		background-color: green;
+	}
+
+	&.dark-green {
+		background-color: darkgreen;
+	}
+}
+
+.vote {
+	font-size: 0.8rem;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+
+/*----- Media queries ----*/
+
+@media screen and (max-width: 767px) {
+	.page-content {
+		margin: 25px 15px;
+	}
+
+	.card {
+		width: 100%;
+	}
+}
